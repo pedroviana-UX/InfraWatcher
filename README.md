@@ -31,7 +31,7 @@ O projeto está sendo desenvolvido gradualmente como forma de estudo de Python, 
 - [x] Criar estrutura inicial
 - [x] Criar menu interativo
 - [x] Permitir cadastro de host
-- [ ] Implementar teste de Ping
+- [x] Implementar teste de Ping
 - [ ] Implementar monitoramento SNMP
 - [ ] Implementar leitura de memória
 - [ ] Exportar logs
