@@ -1,6 +1,16 @@
+
+import platform
+
+sistema = platform.system()
+if sistema == "Windows":
+    parametro = "-n"
+else:
+    parametro = "-c"
+
 def solicitar_host():
     host = input("Digite o host:")
     return host
+
 def mostrar_menu():
     print("\n===== InfraWatch =====\n")
     print("1. Digitar Host")
@@ -8,13 +18,10 @@ def mostrar_menu():
     print("3. Testar SNMP")
     print("4. Verificar memória")
     print("0. Sair")
-    opcao = input("Selecione uma opcao")
+    opcao = input("Selecione uma opcao\n")
     return opcao
-def testar_ping(host):
-    if host:
-        print(f"Testando ping para {host}...")
-    else:
-        print("Nenhum host definido ainda!")    
+
+from monitoramento import testar_ping
 
 host = None
 
@@ -28,7 +35,11 @@ while True:
         host = solicitar_host()
 
     elif opcao == "2":
-        testar_ping(host)
+        resultado = testar_ping(host)
+        if resultado:
+            print(f"{host} Online")
+        else:
+            print(f"{host} Offline")
 
     elif opcao == "3":
         print("SNMP ainda não implementado")
