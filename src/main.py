@@ -1,4 +1,4 @@
-from monitoramento import testar_ping
+from monitoramento import verificar_ping
 
 def solicitar_host():
     return input("Digite o host: ")
