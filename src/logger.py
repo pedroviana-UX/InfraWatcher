@@ -20,7 +20,7 @@ def configurar_logger():
     )
 
     handler_arquivo = RotatingFileHandler(
-        LOG_FILE, maxBytes=1_000_000, backupCount=3, enconding="utf-8"
+        LOG_FILE, maxBytes=1_000_000, backupCount=3, encoding="utf-8"
     )
     handler_arquivo.setLevel(logging.DEBUG)
     handler_arquivo.setFormatter(formato)
@@ -34,5 +34,5 @@ def configurar_logger():
 
     return logger
 
-def obter_logger(nome_modulo)
+def obter_logger(nome_modulo):
     return logging.getLogger(f"infrawatch.{nome_modulo}")

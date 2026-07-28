@@ -1,12 +1,22 @@
 import platform
 import subprocess
 
+try: 
+    from src.logger import obter_logger
+except ImportError:
+    from logger import obter_logger
+
+logger = obter_logger(__name__)
+
 
 def verificar_ping(host):
     if not host:
+        logger.warning("Tentativa de ping sem host informado.")
         return False
 
     parametro = "-n" if platform.system() == "Windows" else "-c"
+
+    logger.debug("Iniciando ping para host=%s", host)
 
     try:
         resultado = subprocess.run(
@@ -15,8 +25,14 @@ def verificar_ping(host):
             text=True,
         )
 
-        return resultado.returncode == 0
+        if resultado.returncode == 0:
+            logger.info("Host %s está Online.", host)
+            return True
+        
+        logger.info("Host %s está Offline.", host)
+        return False
 
     except FileNotFoundError:
-        print("Comando 'ping' não encontrado.")
+        logger.error("Comando 'ping' não encontrado no sistema.")
+        print("Comando 'ping' não encontrado. ")
         return False
