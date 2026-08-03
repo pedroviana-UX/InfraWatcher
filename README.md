@@ -26,6 +26,8 @@ O projeto busca aplicar, na prática, conceitos de **automação, qualidade de s
 - ✅ Menu interativo via terminal (CLI)
 - ✅ Cadastro de hosts para monitoramento
 - ✅ Teste de conectividade utilizando ICMP (Ping)
+- ✅ Validação de formato de host e timeout configurável
+- ✅ Diagnóstico completo (execução agregada de todos os testes disponíveis)
 - ✅ Compatibilidade com Windows e Linux
 - ✅ Estrutura modular utilizando separação entre aplicação e lógica de monitoramento
 
@@ -97,12 +99,14 @@ Dessa forma, alterações no código são verificadas automaticamente antes de s
 - [x] Organizar projeto utilizando estrutura de pacotes
 - [x] Adicionar testes automatizados
 - [x] Implementar pipeline CI/CD inicial
+- [x] Implementar sistema de logs
+- [x] Adicionar timeout e validação de host (segurança)
+- [x] Implementar diagnóstico completo (ping + snmp + memória)
 
 ### Próximos passos:
 
 - [ ] Implementar monitoramento SNMP
 - [ ] Coletar informações de memória e recursos do sistema
-- [ ] Implementar sistema de logs
 - [ ] Exportar métricas
 - [ ] Criar API para comunicação externa
 - [ ] Criar dashboard de visualização

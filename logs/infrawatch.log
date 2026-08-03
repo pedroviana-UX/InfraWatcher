@@ -1,2 +1,29 @@
 2026-07-28 08:35:18 | WARNING  | infrawatch.src.monitoramento | Tentativa de ping sem host informado.
 2026-07-28 08:35:18 | WARNING  | infrawatch.src.monitoramento | Tentativa de ping sem host informado.
+2026-08-03 03:23:27 | WARNING  | infrawatch.src.monitoramento | Tentativa de ping sem host informado.
+2026-08-03 03:23:27 | WARNING  | infrawatch.src.monitoramento | Tentativa de ping sem host informado.
+2026-08-03 03:36:49 | WARNING  | infrawatch.src.monitoramento | Tentativa de ping sem host informado.
+2026-08-03 03:36:49 | WARNING  | infrawatch.src.monitoramento | Tentativa de ping sem host informado.
+2026-08-03 03:36:49 | DEBUG    | infrawatch.src.monitoramento | Iniciando ping para host=qualquer.host
+2026-08-03 03:36:49 | INFO     | infrawatch.src.monitoramento | Host qualquer.host está Online.
+2026-08-03 03:36:49 | DEBUG    | infrawatch.src.monitoramento | Iniciando ping para host=qualquer.host
+2026-08-03 03:36:49 | INFO     | infrawatch.src.monitoramento | Host qualquer.host está Offline.
+2026-08-03 04:21:37 | INFO     | infrawatch.__main__ | Aplicação InfraWatch iniciada. 
+2026-08-03 04:21:56 | INFO     | infrawatch.__main__ | Host definido: 8.8.8.8
+2026-08-03 04:22:01 | DEBUG    | infrawatch.src.monitoramento | Iniciando ping para host=8.8.8.8
+2026-08-03 04:22:11 | WARNING  | infrawatch.src.monitoramento | Ping para host 8.8.8.8 excedeu o tempo limite.
+2026-08-03 04:24:16 | INFO     | infrawatch.__main__ | Aplicação InfraWatch iniciada. 
+2026-08-03 04:24:23 | INFO     | infrawatch.__main__ | Host definido: 8.8.8.8
+2026-08-03 04:24:25 | DEBUG    | infrawatch.src.monitoramento | Iniciando ping para host=8.8.8.8
+2026-08-03 04:24:35 | WARNING  | infrawatch.src.monitoramento | Ping para host 8.8.8.8 excedeu o tempo limite.
+2026-08-03 04:25:28 | INFO     | infrawatch.__main__ | Aplicação encerrada pelo usuário.
+2026-08-03 04:41:27 | WARNING  | infrawatch.src.monitoramento | Tentativa de ping sem host informado.
+2026-08-03 04:41:27 | WARNING  | infrawatch.src.monitoramento | Tentativa de ping sem host informado.
+2026-08-03 04:41:27 | DEBUG    | infrawatch.src.monitoramento | Iniciando ping para host=qualquer.host
+2026-08-03 04:41:27 | INFO     | infrawatch.src.monitoramento | Host qualquer.host está Online.
+2026-08-03 04:41:27 | DEBUG    | infrawatch.src.monitoramento | Iniciando ping para host=qualquer.host
+2026-08-03 04:41:27 | INFO     | infrawatch.src.monitoramento | Host qualquer.host está Offline.
+2026-08-03 04:41:27 | DEBUG    | infrawatch.src.monitoramento | Iniciando ping para host=8.8.8.8
+2026-08-03 04:41:27 | INFO     | infrawatch.src.monitoramento | Host 8.8.8.8 está Online.
+2026-08-03 04:41:27 | DEBUG    | infrawatch.src.monitoramento | Iniciando ping para host=8.8.8.8
+2026-08-03 04:41:27 | INFO     | infrawatch.src.monitoramento | Host 8.8.8.8 está Offline.
