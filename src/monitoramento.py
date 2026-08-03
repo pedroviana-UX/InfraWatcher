@@ -6,10 +6,12 @@ PADRAO_HOST_VALIDO = re.compile(
     r"^[a-zA-Z0-9]([a-zA-Z0-9\-\.]*[a-zA-Z0-9])?$"
 )
 
+
 def host_e_valido(host):
     if not host or len(host) > 253:
         return False
     return bool(PADRAO_HOST_VALIDO.match(host))
+
 
 try:
     from src.logger import obter_logger
@@ -27,7 +29,7 @@ def verificar_ping(host):
     if not host_e_valido(host):
         logger.warning("Host inválido informado: %s", host)
         return False
-    
+
     parametro = "-n" if platform.system() == "Windows" else "-c"
 
     logger.debug("Iniciando ping para host=%s", host)
@@ -53,6 +55,7 @@ def verificar_ping(host):
 
     logger.info("Host %s está Offline.", host)
     return False
+
 
 def diagnostico_completo(host):
     resultados = {}

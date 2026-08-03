@@ -5,6 +5,7 @@ from logging.handlers import RotatingFileHandler
 LOG_DIR = "logs"
 LOG_FILE = os.path.join(LOG_DIR, "infrawatch.log")
 
+
 def configurar_logger():
     os.makedirs(LOG_DIR, exist_ok=True)
 
@@ -13,7 +14,7 @@ def configurar_logger():
 
     if logger.handlers:
         return logger
-    
+
     formato = logging.Formatter(
         "%(asctime)s | %(levelname)-8s | %(name)s | %(message)s",
         datefmt="%Y-%m-%d %H:%M:%S",
@@ -33,6 +34,7 @@ def configurar_logger():
     logger.addHandler(handler_console)
 
     return logger
+
 
 def obter_logger(nome_modulo):
     return logging.getLogger(f"infrawatch.{nome_modulo}")

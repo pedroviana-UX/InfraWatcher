@@ -10,8 +10,10 @@ except ImportError:
 
 logger = obter_logger(__name__)
 
+
 def solicitar_host():
     return input("Digite o host: ")
+
 
 def exibir_diagnostico(resultados):
     print("\n===== Diagnóstico Completo =====")
@@ -22,6 +24,7 @@ def exibir_diagnostico(resultados):
             print(f"{teste.upper()}: FALHOU")
         else:
             print(f"{teste.upper()}: não implementado")
+
 
 def mostrar_menu():
     print("\n===== InfraWatch =====\n")
@@ -34,9 +37,10 @@ def mostrar_menu():
 
     return input("Selecione uma opção: ")
 
+
 def main():
     configurar_logger()
-    logger.info("Aplicação InfraWatch iniciada. ")
+    logger.info("Aplicação InfraWatch iniciada.")
 
     host = None
 
@@ -66,7 +70,7 @@ def main():
                 print(f"{host} está Offline.\n")
 
         elif opcao == "3":
-            logger.debug("Opção SNMP selecionada. ")
+            logger.debug("Opção SNMP selecionada.")
             print("SNMP ainda não implementado.\n")
 
         elif opcao == "4":
@@ -79,6 +83,7 @@ def main():
                 print("Nenhum host foi informado.")
                 print("Escolha a opção 1 primeiro.\n")
                 continue
+
             resultados = diagnostico_completo(host)
             exibir_diagnostico(resultados)
 
